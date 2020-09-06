@@ -1,0 +1,76 @@
+## Recuperar empleados
+GET http://localhost:3000/api/empleados
+
+### Recuperar departamentos
+
+GET http://localhost:3000/api/departamentos
+
+### Insertar empleado
+POST http://localhost:3000/api/empleados
+Content-Type: application/json
+
+{
+    "nombre": "Jimmy",
+    "dni": "045896523",
+    "sexo":"M", 
+    "fecha_nac":"1988-06-15", 
+    "salario":7500.00, 
+    "cargo":"Recursos Humanos", 
+    "fk_departamento":3, 
+    "jefe_id":10
+}
+
+### Insertar departamento
+POST http://localhost:3000/api/departamentos
+Content-Type: application/json
+
+{
+    "nombre": "Recursos Humanos",
+    "ciudad": "Madrid"
+}
+
+
+
+
+### Editar empleado
+PUT http://localhost:3000/api/empleados
+Content-Type: application/json
+
+{
+    "id":14,
+    "nombre": "Gonzo",
+    "dni": "056451236",
+    "sexo": "M",
+    "fecha_nac": "1980-01-03",
+    "salario": 850,
+    "cargo": "Becario",
+    "fk_departamento": 1,
+    "jefe_id": 08
+}
+
+### Editar departamento
+PUT http://localhost:3000/api/departamentos
+Content-Type: application/json
+
+{
+   "id": 8,
+    "nombre": "Mantenimiento",
+    "ciudad": "Cádiz"
+}
+
+### Borrar empleado
+DELETE http://localhost:3000/api/empleados
+Content-Type: application/json
+
+{
+    "id":13
+}
+
+
+### Borrar departamento
+DELETE http://localhost:3000/api/departamentos
+Content-Type: application/json
+
+{
+    "id":4
+}
